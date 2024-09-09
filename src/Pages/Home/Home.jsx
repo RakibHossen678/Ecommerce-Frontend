@@ -1,5 +1,6 @@
 import Banner from "./Banner";
 import Categories from "./Categories";
+import HeroSection from "./HeroSection";
 
 
 const Home = () => {
@@ -7,6 +8,7 @@ const Home = () => {
     <>
       <Banner/>
       <Categories/>
+      <HeroSection/>
     </>
   );
 };
