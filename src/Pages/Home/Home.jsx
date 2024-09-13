@@ -6,6 +6,7 @@ import Contact from "./Contact";
 import AllUsers from "./Allusers";
 import ServicesPage from "./ServicesPage";
 import Deals from "./Deals";
+import PromoBanner from "./PromoBanner";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <HeroSection />
       <TrendingProducts />
       <Deals />
+      <PromoBanner/>
       <Contact />
       <AllUsers />
       <ServicesPage />
