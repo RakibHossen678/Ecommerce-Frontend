@@ -7,6 +7,7 @@ import AllUsers from "./Allusers";
 import ServicesPage from "./ServicesPage";
 import Deals from "./Deals";
 import PromoBanner from "./PromoBanner";
+import Blogs from "../blogs/Blogs";
 
 const Home = () => {
   return (
@@ -16,7 +17,8 @@ const Home = () => {
       <HeroSection />
       <TrendingProducts />
       <Deals />
-      <PromoBanner/>
+      <PromoBanner />
+      <Blogs />
       <Contact />
       <AllUsers />
       <ServicesPage />
