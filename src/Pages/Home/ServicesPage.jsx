@@ -58,7 +58,7 @@ const ServicesPage = () => {
               <td className="px-6 py-4 whitespace-nowrap">Cleaning</td>
               <td className="px-6 py-4 whitespace-nowrap">Active</td>
               <td className="px-6 py-4 whitespace-nowrap flex gap-2">
-                <button className="text-red-500">
+                <button className="text-red-500 flex gap-2 items-center">
                   <FaTrash />
                   <span>Delete</span>
                 </button>
