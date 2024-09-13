@@ -5,6 +5,7 @@ import TrendingProducts from "../shop/TrendingProducts";
 import Contact from "./Contact";
 import AllUsers from "./Allusers";
 import ServicesPage from "./ServicesPage";
+import Deals from "./Deals";
 
 const Home = () => {
   return (
@@ -13,9 +14,10 @@ const Home = () => {
       <Categories />
       <HeroSection />
       <TrendingProducts />
-      <Contact/>
-      <AllUsers/>
-      <ServicesPage/>
+      <Deals />
+      <Contact />
+      <AllUsers />
+      <ServicesPage />
     </>
   );
 };
