@@ -12,7 +12,7 @@ const PromoBanner = () => {
         <span>
           <i className="ri-exchange-dollar-line"></i>
         </span>
-        <h4>100% Money Back Guarantee</h4>
+        <h4 className="text-[18px]">100% Money Back Guarantee</h4>
         <p>
           Shop with confidence—get a full refund if you{"'"}re not satisfied.
         </p>

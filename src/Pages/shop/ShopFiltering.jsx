@@ -27,7 +27,7 @@ const ShopFiltering = ({
               onChange={(e) =>
                 setFilteredState({ ...filteredState, category: e.target.value })
               }
-              className="form-radio h-7 w-5 text-blue-600 focus:ring-blue-500 border-blue-300"
+              className="form-radio h-5 w-5 text-blue-600 focus:ring-blue-500 border-blue-300"
             />
             <span className="ml-2 text-gray-700 group-hover:text-blue-600 transition-colors">
               {category}
@@ -53,7 +53,7 @@ const ShopFiltering = ({
               onChange={(e) =>
                 setFilteredState({ ...filteredState, color: e.target.value })
               }
-              className="form-radio h-7 w-5 text-blue-600 focus:ring-blue-500 border-blue-300"
+              className="form-radio h-5 w-5 text-blue-600 focus:ring-blue-500 border-blue-300"
             />
             <span className="ml-2 text-gray-700 group-hover:text-blue-600 transition-colors">
               {color}
@@ -75,16 +75,14 @@ const ShopFiltering = ({
               name="priceRanges"
               id="priceRanges"
               value={`${range.min}-${range.max}`}
-              checked={
-                filteredState.priceRange === `${range.min}-${range.max}`
-              }
+              checked={filteredState.priceRange === `${range.min}-${range.max}`}
               onChange={(e) =>
                 setFilteredState({
                   ...filteredState,
                   priceRange: e.target.value,
                 })
               }
-              className="form-radio h-7 w-5 text-blue-600 focus:ring-blue-500 border-blue-300"
+              className="form-radio h-5 w-5 text-blue-600 focus:ring-blue-500 border-blue-300"
             />
             <span className="ml-2 text-gray-700 group-hover:text-blue-600 transition-colors">
               {range.label}
@@ -92,6 +90,14 @@ const ShopFiltering = ({
           </label>
         ))}
       </div>
+
+      {/* clear filter */}
+      <button
+        onClick={clearFilters}
+        className="bg-primary py-1 px-4 text-white rounded"
+      >
+        Clear All Filters
+      </button>
     </div>
   );
 };
