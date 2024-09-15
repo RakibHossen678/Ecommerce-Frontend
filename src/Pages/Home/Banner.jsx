@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import headerImage from "../../assets/header.png";
-
 const Banner = () => {
   return (
     <div className="section__container header__container">
