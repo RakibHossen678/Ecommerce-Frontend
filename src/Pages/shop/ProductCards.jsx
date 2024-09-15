@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import RatingStar from "../../components/RatingStar";
 
 const ProductCards = ({ products }) => {
-  console.table(products);
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 lg:grid-cols-4">
       {products.map((product, idx) => (
