@@ -6,15 +6,15 @@ const ProductCards = ({ products }) => {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 lg:grid-cols-4">
       {products.map((product, idx) => (
-        <div key={idx} className="product_card">
+        <Link to={`/shop/${product.id}`} key={idx} className="product_card">
           <div className="relative">
-            <Link to={`/shop/${product._id}`}>
+            <div>
               <img
                 src={product.image}
                 alt="product image"
                 className="max-h-96 md:h-64 w-full object-cover hover:scale-105 transition duration-300"
               />
-            </Link>
+            </div>
             <div className="absolute hover:block top-3  right-3 rounded-md text-white">
               <button>
                 <i className="ri-shopping-cart-2-line bg-primary p-1.5 hover:bg-primary-dark"></i>
@@ -29,7 +29,7 @@ const ProductCards = ({ products }) => {
             </p>
             <RatingStar ratings={product.rating} />
           </div>
-        </div>
+        </Link>
       ))}
     </div>
   );
