@@ -61,6 +61,37 @@ const ShopFiltering = ({
           </label>
         ))}
       </div>
+      {/* price filter */}
+      <div className="flex flex-col space-y-4">
+        <h4 className="font-medium text-lg text-gray-700">Price</h4>
+        <hr />
+        {filter.priceRanges.map((range) => (
+          <label
+            key={range.label}
+            className="flex items-center space-x-2 cursor-pointer group"
+          >
+            <input
+              type="radio"
+              name="priceRanges"
+              id="priceRanges"
+              value={`${range.min}-${range.max}`}
+              checked={
+                filteredState.priceRange === `${range.min}-${range.max}`
+              }
+              onChange={(e) =>
+                setFilteredState({
+                  ...filteredState,
+                  priceRange: e.target.value,
+                })
+              }
+              className="form-radio h-7 w-5 text-blue-600 focus:ring-blue-500 border-blue-300"
+            />
+            <span className="ml-2 text-gray-700 group-hover:text-blue-600 transition-colors">
+              {range.label}
+            </span>
+          </label>
+        ))}
+      </div>
     </div>
   );
 };
