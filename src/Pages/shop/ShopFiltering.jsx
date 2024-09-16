@@ -7,7 +7,7 @@ const ShopFiltering = ({
   clearFilters,
 }) => {
   return (
-    <div className="space-y-5 flex-shrink-0 bg-white p-6 rounded-lg ">
+    <div className="space-y-5 flex-shrink-0 bg-extra-light p-6 rounded-lg ">
       <h3 className="text-2xl font-semibold text-gray-800">Filters</h3>
       {/* Category Filter */}
       <div className="flex flex-col space-y-4">

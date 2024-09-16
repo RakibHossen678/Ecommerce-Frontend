@@ -17,7 +17,7 @@ const CategoryPage = () => {
   }, []);
   return (
     <>
-      <section className="section__container bg-primary-light ">
+      <section className="section__container bg-extra-light ">
         <h2 className="section__header capitalize">{categoryName}</h2>
         <p className="section__subheader">
           Browse a diverse range of categories, from chic dresses to versatile

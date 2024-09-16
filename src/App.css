@@ -291,7 +291,7 @@ nav {
 }
 
 .deals__container {
-  background-color: var(--primary-color-light);
+  background-color: var(--extra-light);
   border-radius: 1rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -556,7 +556,7 @@ nav {
   .categories__grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .nav__icons{
+  .nav__icons {
     gap: 20px;
   }
 

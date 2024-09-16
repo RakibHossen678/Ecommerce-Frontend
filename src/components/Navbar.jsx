@@ -99,7 +99,7 @@ const Navbar = () => {
           </span>
           <span>
             <Link to={"/login"}>
-              <i className="ri-user-line"></i>
+              <i className="ri-login-circle-line "></i>
             </Link>
           </span>
         </div>

@@ -27,6 +27,22 @@ export const cartSlice = createSlice({
       state.tax = setTax(state);
       state.grandTotal = setGrandTotal(state);
     },
+    updateQuantity: (state, action) => {
+      const product = state.products.map((product) => {
+        if (product._id === action.payload._id) {
+          if (action.payload.type === "increment") {
+            product.quantity += 1;
+          } else if (action.payload.type === "decrement") {
+            if (product.quantity > 1) product.quantity -= 1;
+          }
+        }
+        return product;
+      });
+      state.selectedItems = setSelectedItems(state);
+      state.totalPrice = setTotalPrice(state);
+      state.tax = setTax(state);
+      state.grandTotal = setGrandTotal(state);
+    },
   },
 });
 
@@ -34,12 +50,12 @@ export const cartSlice = createSlice({
 export const setSelectedItems = (state) =>
   state.products.reduce((total, product) => {
     return Number(total + product.quantity);
-  },0);
+  }, 0);
 
 export const setTotalPrice = (state) =>
   state.products.reduce((total, product) => {
     return Number(total + product.price * product.quantity);
-  },0);
+  }, 0);
 
 export const setTax = (state) => setTotalPrice(state) * state.taxRate;
 

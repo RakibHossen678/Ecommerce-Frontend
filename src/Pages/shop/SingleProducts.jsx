@@ -11,7 +11,7 @@ const SingleProducts = () => {
   }, []);
   return (
     <>
-      <section className="section__container bg-primary-light ">
+      <section className="section__container bg-extra-light ">
         <h2 className="section__header capitalize">Shop Page</h2>
         <div className="section__subheader space-x-2 ">
           <span className="hover:text-primary">

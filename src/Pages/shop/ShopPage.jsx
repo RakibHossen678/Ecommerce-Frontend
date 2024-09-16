@@ -67,8 +67,8 @@ const ShopPage = () => {
   };
 
   return (
-    <>
-      <section className="section__container bg-primary-light ">
+    <div className="inset-0 -z-10 h-full w-full bg-primary-light bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]">
+      <section className="section__container bg-extra-light ">
         <h2 className="section__header capitalize">Shop Page</h2>
         <p className="section__subheader">
           Browse a diverse range of categories, from chic dresses to versatile
@@ -94,7 +94,7 @@ const ShopPage = () => {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 
