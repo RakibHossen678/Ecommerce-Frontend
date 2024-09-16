@@ -1,10 +1,15 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { clearCart } from "../../Redux/featues/cart/cartSlice";
 
 const OrderSummery = () => {
   const products = useSelector((store) => store.cart.products);
   const { tax, taxRate, totalPrice, grandTotal, selectedItems } = useSelector(
     (store) => store.cart
   );
+  const dispatch = useDispatch();
+  const handleClearCart = () => {
+    dispatch(clearCart());
+  };
 
   return (
     <div className="bg-white mt-6 rounded-lg shadow-lg text-base">
@@ -31,7 +36,10 @@ const OrderSummery = () => {
           <span className="text-primary">${grandTotal.toFixed(2)}</span>
         </h3>
         <div className="flex justify-between mt-6">
-          <button className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg shadow-md transform transition duration-300 hover:scale-105 flex items-center space-x-2">
+          <button
+            onClick={handleClearCart}
+            className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg shadow-md transform transition duration-300 hover:scale-105 flex items-center space-x-2"
+          >
             <span>Clear Cart</span> <i className="ri-delete-bin-line"></i>
           </button>
           <button className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg shadow-md transform transition duration-300 hover:scale-105 flex items-center space-x-2">

@@ -1,6 +1,11 @@
 import { RxCross2 } from "react-icons/rx";
 import PropTypes from "prop-types";
 import OrderSummery from "./OrderSummery";
+import { useDispatch } from "react-redux";
+import {
+  removeFromCart,
+  updateQuantity,
+} from "../../Redux/featues/cart/cartSlice";
 
 const CartModal = ({ products, onClose, isOpen }) => {
   const handleOverlayClick = () => {
@@ -11,6 +16,16 @@ const CartModal = ({ products, onClose, isOpen }) => {
     e.stopPropagation();
   };
 
+  const dispatch = useDispatch();
+  const handleQuantity = (type, id) => {
+    const payload = { type, id };
+    dispatch(updateQuantity(payload));
+  };
+
+  const handleRemove = (e, id) => {
+    e.preventDefault();
+    dispatch(removeFromCart({ id }));
+  };
   return (
     <div
       onClick={handleOverlayClick}
@@ -65,16 +80,25 @@ const CartModal = ({ products, onClose, isOpen }) => {
 
                   <div className="flex items-center justify-between mt-3 md:mt-0 w-full md:w-2/5">
                     <div className="flex items-center space-x-3">
-                      <button className="w-7 h-7 flex items-center justify-center rounded-full bg-gray-200 text-gray-700 hover:bg-primary hover:text-white transition">
+                      <button
+                        onClick={() => handleQuantity("decrement", item._id)}
+                        className="w-7 h-7 flex items-center justify-center rounded-full bg-gray-200 text-gray-700 hover:bg-primary hover:text-white transition"
+                      >
                         -
                       </button>
                       <span className="px-1">{item.quantity}</span>
-                      <button className="w-7 h-7 flex items-center justify-center rounded-full bg-gray-200 text-gray-700 hover:bg-primary hover:text-white transition">
+                      <button
+                        onClick={() => handleQuantity("increment", item._id)}
+                        className="w-7 h-7 flex items-center justify-center rounded-full bg-gray-200 text-gray-700 hover:bg-primary hover:text-white transition"
+                      >
                         +
                       </button>
                     </div>
 
-                    <button className="text-blue-500 hover:text-blue-800 transition ">
+                    <button
+                      onClick={(e) => handleRemove(e, item._id)}
+                      className="text-blue-500 hover:text-blue-800 transition "
+                    >
                       Remove
                     </button>
                   </div>
