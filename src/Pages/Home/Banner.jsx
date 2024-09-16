@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import headerImage from "../../assets/header.png";
+import headerImage from "../../assets/header1.png";
 const Banner = () => {
   return (
-    <div className="section__container header__container">
+    <div className="section__container header__container shadow-md">
       <div className="header__content z-30">
         <h4>UP TO 20% Discount on</h4>
         <h1>Girl's Fashion</h1>

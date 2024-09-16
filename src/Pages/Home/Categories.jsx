@@ -12,8 +12,9 @@ const Categories = () => {
     { name: "Cosmetics", path: "cosmetics", image: cat4 },
   ];
   return (
-    <>
-      <div className="product__grid">
+    <div className="border border-primary-light  inset-0 -z-10 h-full w-full bg-primary-light bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]">
+    
+      <div className="product__grid ">
         {categories.map((category, idx) => (
           <Link
             key={idx}
@@ -25,7 +26,7 @@ const Categories = () => {
           </Link>
         ))}
       </div>
-    </>
+    </div>
   );
 };
 

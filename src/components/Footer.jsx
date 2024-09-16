@@ -6,7 +6,7 @@ import instagram5 from "../assets/instagram-5.jpg";
 import instagram6 from "../assets/instagram-6.jpg";
 const Footer = () => {
   return (
-    <>
+    <div className=" top-0 z-[-2] bg-radial-custom">
       <footer className="section__container footer__container">
         <div className="footer__col">
           <h4>CONTACT INFO</h4>
@@ -59,7 +59,7 @@ const Footer = () => {
       <div className="footer__bar">
         Copyright @ 2025 StyleBask. All rights reserved.
       </div>
-    </>
+    </div>
   );
 };
 

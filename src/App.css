@@ -19,7 +19,14 @@
   margin: 0;
   box-sizing: border-box;
 }
-
+.bg-radial-custom {
+  background: radial-gradient(
+    100% 50% at 50% 0%,
+    #ecf0f1 0%,
+    rgba(0, 162, 255, 0) 50%,
+    rgba(0, 162, 255, 0.033) 100%
+  );
+}
 .section__container {
   max-width: var(--max-width-1200);
   margin: auto;

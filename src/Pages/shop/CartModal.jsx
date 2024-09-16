@@ -1,5 +1,6 @@
 import { RxCross2 } from "react-icons/rx";
 import PropTypes from "prop-types";
+import OrderSummery from "./OrderSummery";
 
 const CartModal = ({ products, onClose, isOpen }) => {
   const handleOverlayClick = () => {
@@ -81,6 +82,8 @@ const CartModal = ({ products, onClose, isOpen }) => {
               ))
             )}
           </div>
+
+          {products.length > 0 && <OrderSummery />}
         </div>
       </div>
     </div>
