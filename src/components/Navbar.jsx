@@ -1,6 +1,13 @@
+import { useState } from "react";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  const products = useSelector((state) => state.cart.products);
+  const [isCartOpen, setIsCarOpen] = useState(false);
+  const handleToggle = () => {
+    setIsCarOpen(!isCartOpen);
+  };
   return (
     <header className=" ">
       <nav>
@@ -34,10 +41,13 @@ const Navbar = () => {
             </Link>
           </span>
           <span>
-            <button className="hover:text-primary text-xl">
+            <button
+              onClick={handleToggle}
+              className="hover:text-primary text-xl"
+            >
               <i className="ri-shopping-bag-line"></i>
-              <sup className="text-sm px-1.5 text-center py-[1px] text-white rounded-3xl bg-primary">
-                0
+              <sup className="text-sm px-1.5 text-center  text-white rounded-full bg-primary">
+                {products.length}
               </sup>
             </button>
           </span>
@@ -48,6 +58,7 @@ const Navbar = () => {
           </span>
         </div>
       </nav>
+      {isCartOpen && <div>cart Modal</div>}
     </header>
   );
 };
